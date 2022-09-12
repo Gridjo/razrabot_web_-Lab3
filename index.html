@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>разработка веб</title>
+</head>
+<body>
+<script type="text/javascript">
+	var arr = [];
+function getValue2(){
+    var min = Math.min.apply(null, arr);
+    var max = Math.max.apply(null, arr);
+    var summ = 0;
+    for (i = 0; i < arr.length; i++){
+        summ += arr[i]
+    }
+    document.writeln("max:",max,"min:",min,"summ:",summ)
+}
+function getValue1(){
+
+	arr.push(Number(document.getElementById("i").value));
+}
+
+
+</script>
+<input type="text" id="i" value="добавить элемент в массив">
+<input type="submit" onclick="getValue1()">
+<input type="submit" onclick="getValue2()" value="расчитать">
+</body>
+</html>
